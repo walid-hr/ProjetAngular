@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class PereComponent implements OnInit {
 
   constructor() { }
+  
 tab: Array<string>=['p1','p2','p3'];
 sud ='kasserine';
 nord ='monastir';
