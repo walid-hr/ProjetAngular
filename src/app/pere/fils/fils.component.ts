@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-fils',
@@ -6,11 +6,17 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./fils.component.css']
 })
 export class FilsComponent implements OnInit {
-
-  constructor() { }
-@Input() ordre: string="";
-@Input() villeNaissance: string=""
+@Input() nom: string="";
+@Output() message =new EventEmitter<number>();
+note: any;
+buttonStatus : boolean =false;
+//   constructor() { }
+// @Input() ordre: string="";
+// @Input() villeNaissance: string=""
   ngOnInit(): void {
   }
-
+send(){
+  this.message.emit(this.note);
+  this.buttonStatus =true;
+}
 }

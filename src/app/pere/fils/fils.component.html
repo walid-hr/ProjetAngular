@@ -1,8 +1,13 @@
-<p>fils works!</p>
+<!-- <p>fils works!</p>
 <li>
     Je suis un fils : <ng-content></ng-content>
 </li>
 
 <li>
     Je suis le {{ ordre }} fils et suis de {{ villeNaissance}}
-</li>
+</li> -->
+<h6>{{nom}}</h6>
+<input type="number" name="note" [(ngModel)]=note>
+<button (click)="send()" [disabled]="buttonStatus">
+    Send
+</button>
