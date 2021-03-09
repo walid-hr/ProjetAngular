@@ -19,13 +19,14 @@
     <tbody>
       <tr *ngFor="let item of Items; index as i" >
         <th scope="row">{{ i + 1 }}</th>
-        <td>{{item.name}}</td>
-        <td>{{item.age}}</td>
+        <td  [ngStyle]="{'color':item.age === 26 ? 'green' : '' }">{{item.name}}</td>
+        <td [ngStyle]="{'color':item.age === 28 ? 'red' : '' }"> {{item.age}}</td>
         <td><img src="{{item.imgurl}}" style="width: 50px; height: 50px;"/></td>
       </tr>
     </tbody>
   </table>
-  <div [ngStyle]="{'background-color':'green'}">Test ngStyle </div>
+  <div [ngStyle]="{'color':'green'}">Test ngStyles </div>
+  <p [ngClass]="{'text-success':true}"> Test ngClass </p>
 </div>
 
 
